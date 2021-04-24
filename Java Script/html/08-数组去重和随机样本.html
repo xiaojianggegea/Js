@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>数组去重和随机样本</title>
+	</head>
+	<body>
+		<script type="text/javascript">
+			// 数组去重 （准备一个空数组，遍历原数组，如果遍历到项不在结果数组中，则推入到结果数组）。
+			// 随机样本
+			var arr=[3,5,6,8,9,15]; 
+			var result=[];
+				//遍历原数组
+				 for(var i= 0;i<3;i++){
+					 // 随机选择一项的下标，数组的下标，0~arr.lenght-1;
+					 // [a,b]区间的随机数是parseInt(Math.random()*(b-a+1)+a);
+					 var n = parseInt(Math.random()*arr.length);
+					 // 把这个推入结果数组
+					 result.push(arr[n]);
+					 // 删除这项，防止重复随机到
+					 arr.splice(n,1);
+				 }
+				 console.log(result);
+		</script>
+	</body>
+</html>

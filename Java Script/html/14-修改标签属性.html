@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>修改标签属性</title>
+	</head>
+	<body>
+		<button id="ghj">郭怀江</button>
+		<button id="xm">小明</button>
+		<img src="../我的相册/imags/01.jpg" >
+		<script type="text/javascript">
+			var ghj = document.getElementById('ghj');
+			var xm = document.getElementById('xm');
+			var img = document.querySelector('img');
+			ghj.onclick = function(){
+				img.src = '../我的相册/imags/01.jpg';
+				img.title = '郭怀江图一';
+			}
+			xm.onclick = function(){
+				img.src = '../我的相册/imags/03.jpg';
+				img.title = '小明图一';
+			}
+		</script>
+	</body>
+</html>

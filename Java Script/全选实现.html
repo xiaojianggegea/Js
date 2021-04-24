@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>全选实现</title>
+		<style type="text/css">
+			* {
+				margin: 0;
+				padding: 0;
+			}
+
+			table {
+				margin: 100px auto;
+				text-align: center;
+				width: 300px;
+				border: 1px solid #a1a1a1;
+				border-collapse: collapse;
+			}
+
+			thead tr {
+				background-color: skyblue;
+			}
+
+			tbody tr td {
+				background-color: aliceblue;
+				border: 1px solid #a1a1a1;
+			}
+		</style>
+
+	</head>
+	<body>
+			<table>
+				<thead>
+					<tr>
+						<th><input type="checkbox" id="check_all">全选</th>
+						<th>商品</th>
+						<th>价钱</th>
+					</tr>
+				</thead>
+				<tbody id="multiple_choice">
+					<tr>
+						<td><input type="checkbox" id="ha1"></td>
+						<td>iPhone 8</td>
+						<td>8000</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="ha2"></td>
+						<td>iPad Pro</td>
+						<td>5000</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="ha3"></td>
+						<td>iPad Ari</td>
+						<td>2000</td>
+					</tr>
+					<tr>
+						<td><input type="checkbox" id="ha4"></td>
+						<td>Apple Watch</td>
+						<td>2000</td>
+					</tr>
+					<tr>
+						<td><button id="one">一个一个改</button></td>
+						<td></td>
+						<td></td>
+					</tr>
+				</tbody>
+			</table>
+		<script type="text/javascript">
+			var checkall = document.getElementById('check_all');
+			var multiple_choice = document.getElementById('multiple_choice').getElementsByTagName('input');
+			var one = document.getElementById('one');
+			checkall.onclick = function() {
+				for (var i = 0; i < multiple_choice.length; i++) {
+					multiple_choice[i].checked = this.checked;
+				}
+			}
+			for (i = 0; i < multiple_choice.length; i++) {
+				multiple_choice[i].onclick = function() {
+					flag = true;
+					for (var i = 0; i < multiple_choice.length; i++) {
+						if (!multiple_choice[i].checked) {
+							flag = false;
+						}
+					}
+					checkall.checked = flag;
+				}
+			}
+			var a=1;
+			one.onclick= function(id){
+				var ha = document.getElementById('ha'+id);
+				ha.checked = true;
+				if(a<=6){
+					a++;
+					setTimeout('',1000);
+				}else {
+					a=1;
+				}
+			}
+		</script>
+	</body>
+</html>

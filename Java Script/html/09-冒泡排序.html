@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>冒泡排序</title>
+</head>
+
+<body>
+	<script type="text/javascript">
+		// 冒泡排序
+		var arr = [6, 2, 3, 4, 9, 10, 1, 7];
+		// 一趟一趟比较，趟数序号为1
+		for (var i = 1; i < array.length; i++) {
+			// 两两比较
+			for (var j = arr.length - 1; j >= i; j--) {
+				// 判断项的大小
+				if (arr[j]<arr[j-1]) {
+					var temp = arr[j];
+					arr[j] = arr[j - 1];
+					arr[j - 1] = temp;
+				}
+			}
+		}
+		console.log(arr);
+	</script>
+</body>
+
+</html>

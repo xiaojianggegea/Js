@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>DOM</title>
+	</head>
+	<body>
+		<!--
+		 1、nodeType常用属性值
+				1 元素节点。3 文字节点。8 注释节点。 9 document节点。 10 DTD节点。
+		 2、**访问元素节点（document对象）
+				document.getElementById()  			通过id得到元素  
+				document.getElementsByTagName() 	通过标签名得到元素数组
+				document.getElementsByClassName()  	通过类名得到元素数组 
+				document.querySelector()	   		通过选择器得到元素 
+				document.querySelectorAll() 		通过选择器得到元素数组 
+		 -->
+		<script type="text/javascript">
+			// 1、通过id得到元素  
+			// var box1= document.getElementById('box1');
+			// var box1= document.getElementById('box2');
+			// console.log(box1);
+			// console.log(box2);
+
+			// 2、通过标签名得到元素数组
+			// var ps = document.getElementsByName('p');
+			// console.log(ps);
+
+			// 3、通过类名得到元素数组 
+			// getElementsByClassName()方法的功能是通过类名得到节点数组
+			// var spec_divs=document.getElementsByClassName('spec');
+			//  console.log(spec_divs);
+
+			// 4、通过选择器得到元素 
+			// var the_p = document.querySelector('#box1 .spec');
+			// console.log(the_p);
+			// **5、通过选择器得到元素数组 	
+			// 消除文本节点的干扰     
+			// 子节点 				childNodes	children    返回子元素节点		
+			// 父节点 			    parentNode 	       得到的是最近的父节点
+			// 第一个子节点 		    firstChild  firstElementChild 返回第一个子元素节点   *父节点.children[0]
+			// 最后一个子节点 		lastChild   lastElementChild 返回最后一个子元素节点  *父节点.children[父节点.length-1]
+			// 上一个兄弟节点 		previousSibling    previousElementSibling 返回上一个子元素节点
+			// 下一个兄弟节点 		nextSibling 		nextElementSibling    返回下一个子元素节点
+			// 只考虑元素节点 		children
+			// **6、创建节点
+			//  （1）document.createElement('属性');
+			//  （2）添加节点  node.appendChild(child);   node父级  child子级 在父级里面插入元素在原来子级后面
+			// 				  node.insertBefore(child,指定元素);   父级中在指定元素前面插入元素
+			// 7、删除节点
+			//   node.removerChild(child)
+			//   node.removerChild() 从DOM中删除一个子节点，返回删除节点
+		</script>
+	</body>
+</html>

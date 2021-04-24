@@ -1,0 +1,26 @@
+<<!DOCTYPE html>
+	<html lang="zh">
+		<head>
+			<meta charset="UTF-8">
+			<meta name="viewport" content="width=device-width, initial-scale=1.0">
+			<meta http-equiv="X-UA-Compatible" content="ie=edge">
+			<title>Java Script的第一个程序</title>
+		</head>
+		<body onload="alert(456)">
+			<!-- alert 禁告窗口弹出
+	     console.log('Hello World!');浏览器控制台显示 
+		 1、外部导入式 *.js  语法<script  type=”text/jaascript”  src=’路径……js’></script>
+		 2、直接嵌入到html标签中
+		 <script type=”text/javascript”>
+		     js代码
+		 </script>
+		 3、内嵌在标签内，但需要event事件  butten
+	 -->
+			<script type="text/javascript">
+				// 解析HTML标签，不会弹出
+				document.write("<h1>Hello World!</h1>")
+				alert('Hello World!');
+				console.log('Hello World!');
+			</script>
+		</body>
+	</html>

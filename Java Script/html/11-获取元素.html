@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title>获取元素</title>
+	</head>
+	<body>
+		<div id="time1">2021-2-28</div>
+		<div class="time2">2021-2-28-17:41:07</div>
+		<script type="text/javascript">
+			// var timer1= document.getElementById('time1');
+			// console.log(timer1);
+			
+			var timer2 = document.getElementsByName('time2')
+			console.log(timer2);
+			
+			// 获取body标签
+			var bodyEle = document.body;
+			
+			// 获取html标签
+			var htmlEle = document.documentElement;
+			
+			// 返回指定选择器的第一个元素对象
+			var firstBox = document.querySelector('.box');
+			
+			// 获取元素属性值
+			// 1、element.属性
+			// 2、element.getAttribute('id');获取自定义属性
+			// h5新增属性 element。dataset.属性
+			// 自定义元素属性值
+			// 1、element.属性 = '值';
+			// 2、element.setAttribute('id','值');修改自定义属性
+			// 移除属性
+			// element.removeAttribute('属性');
+		</script>
+	</body>
+</html>
